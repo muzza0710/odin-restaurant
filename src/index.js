@@ -1,5 +1,6 @@
 import "./styles.css"
 import { loadHome } from "./home"
+import { loadMenu } from "./menu"
 
 const homeBtn = document.getElementById("home")
 const menuBtn = document.getElementById("menu")
@@ -19,7 +20,8 @@ homeBtn.addEventListener("click", () => {
 });
 
 menuBtn.addEventListener("click", () => {
-    clearContent()
+    clearContent();
+    loadMenu();
 });
 
 aboutBtn.addEventListener("click", () => {
