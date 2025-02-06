@@ -1,17 +1,29 @@
 import "./styles.css"
+import { loadHome } from "./home"
 
 const homeBtn = document.getElementById("home")
 const menuBtn = document.getElementById("menu")
 const aboutBtn = document.getElementById("about")
 
+function clearContent() {
+    const content = document.querySelector("main")
+    while (content.firstChild) {
+        content.removeChild(content.firstChild)
+    }
+    
+}
+
 homeBtn.addEventListener("click", () => {
-    alert("home button pressed")
+    clearContent();
+    loadHome();
 });
 
 menuBtn.addEventListener("click", () => {
-    alert("menu button pressed")
+    clearContent()
 });
 
 aboutBtn.addEventListener("click", () => {
-    alert("about button pressed")
+    clearContent();
 });
+
+loadHome();
